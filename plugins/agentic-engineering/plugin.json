@@ -1,0 +1,19 @@
+{
+  "name": "agentic-engineering",
+  "displayName": "Agentic Engineering Suite 2026",
+  "version": "1.0.0",
+  "description": "Autonomous Agentic Engineering Suite: Git Worktree Delegation, TDD Closed-Loop Self-Healing, and AST-Grep Structural Code Intelligence",
+  "author": {
+    "name": "Antigravity Engineering"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "agentic",
+    "git-worktree",
+    "subagents",
+    "tdd",
+    "self-healing",
+    "ast-grep",
+    "mcp"
+  ]
+}

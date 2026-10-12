@@ -1,0 +1,7 @@
+{
+  "name": "open-code-review",
+  "displayName": "Open Code Review (Alibaba)",
+  "version": "1.12.10",
+  "description": "Battle-tested code review tool by Alibaba Group featuring hybrid architecture and delegation mode for Antigravity.",
+  "homepage": "https://github.com/alibaba/open-code-review"
+}

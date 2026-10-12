@@ -1,0 +1,32 @@
+{
+  "native-impact-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/Admin/.gemini/config/scripts/native_impact_guard.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "aider-native-guard": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/Admin/.gemini/config/bin/aider_guard.exe",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

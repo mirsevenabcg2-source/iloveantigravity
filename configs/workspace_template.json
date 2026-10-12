@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Workspace-level MCP configuration template (e.g. .vscode/mcp.json or project config)",
+  "servers": {
+    "memory": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "${workspaceFolder}/.memory.jsonl"
+      }
+    },
+    "sqlite": {
+      "command": "mcp-server-sqlite",
+      "args": [
+        "--db-path",
+        "${workspaceFolder}/dev.db"
+      ]
+    },
+    "git": {
+      "command": "mcp-server-git",
+      "args": [
+        "--repository",
+        "${workspaceFolder}"
+      ]
+    }
+  }
+}

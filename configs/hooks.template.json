@@ -1,0 +1,32 @@
+{
+  "native-impact-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{PYTHON_CMD}} {{SCRIPTS_DIR}}/native_impact_guard.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "aider-native-guard": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{BIN_DIR}}/aider_guard{{EXE_EXT}}",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

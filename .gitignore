@@ -1,0 +1,41 @@
+# Binaries & Compiled Executables
+*.exe
+*.dll
+*.so
+*.dylib
+bin/
+
+# Environment & Sensitive Credentials
+.env
+.env.local
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.venv
+venv/
+ENV/
+env/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs & Temporary Data
+*.log
+*.tmp
+mem0_data/
+profiles/
+scratch/*.txt
+scratch/*.tmp
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

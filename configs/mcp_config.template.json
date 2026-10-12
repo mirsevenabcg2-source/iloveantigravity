@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "mem0": {
+      "command": "{{BIN_DIR}}/mcp_mem0_bridge{{EXE_EXT}}",
+      "args": [],
+      "description": "High-performance Go bridge to the local Mem0 memory engine (SSE port 8765, Qdrant + Google Antigravity Agent)"
+    },
+    "memory": {
+      "command": "{{BIN_DIR}}/mcp_memory{{EXE_EXT}}",
+      "args": [],
+      "description": "High-speed Go-native in-memory knowledge graph MCP server"
+    },
+    "git": {
+      "command": "{{BIN_DIR}}/mcp_git{{EXE_EXT}}",
+      "args": [],
+      "description": "Native Go Git MCP server for ultra-fast diff, status, log, and checkout operations"
+    },
+    "sqlite": {
+      "command": "{{BIN_DIR}}/mcp_sqlite{{EXE_EXT}}",
+      "args": [],
+      "description": "Native Go SQLite MCP server for querying, inspecting schemas, and insights"
+    },
+    "invisible-playwright": {
+      "command": "{{PYTHON_EXE}}",
+      "args": [
+        "-u",
+        "-m",
+        "invisible_playwright_mcp"
+      ],
+      "env": {
+        "INVISIBLE_MCP_UPLOAD_DIRS": "{{ANTIGRAVITY_DIR}}/scratch",
+        "STEALTHFOX_PROFILE_DIR": "{{ANTIGRAVITY_DIR}}/profiles/stealthfox"
+      },
+      "description": "Stealth Firefox C++ engine anti-detect browser automation and UI testing"
+    },
+    "markitdown": {
+      "command": "{{PYTHON_EXE}}",
+      "args": [
+        "{{SCRIPTS_DIR}}/markitdown_mcp.py"
+      ],
+      "description": "Document and web page conversion to Markdown (PDF, DOCX, XLSX, HTML)"
+    },
+    "ast-grep": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ast-grep-mcp"
+      ],
+      "description": "Structural syntax-aware AST search and refactoring engine"
+    },
+    "lsp-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@theupsider/lsp-mcp"
+      ],
+      "description": "Language Server Protocol integration for precise type-checking, navigation and symbol renaming"
+    }
+  }
+}
